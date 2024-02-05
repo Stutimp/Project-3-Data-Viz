@@ -77,7 +77,13 @@ After making some queries, following are the findings I found from my dataset:
 ### Instructions on viewing the Data Visualizations 
 
 All my data visualizations are inside my output_Viz folder. The visualizations are created using Plotly library. These are user interactive visualizations. I have saved the visualizations in dynamic and static image forms both inside the output Viz folder.A user needs to hover through the graphs and charts in order to better understand the scenario or outcomes it is trying to communicate. 
+
+# Presentation slides
+The slides for presentation is inside the presentation folder as : 
+Stuti_Project_3_Slides_Presentation .pptx
+
 ## Ethical Considerations made in the project:
+
 The ethical considerations for collecting and analyzing datasets are very critical to ensure respect for privacy, consent, fairness, and transparency.The purpose for which data is collected and analyzed should be ethical and not harm individuals or communities.Stakeholders, including the public and data subjects, should have the ability to understand and question how their data is being used and the decisions being made based on the data analysis. 
 For this project, I have used the kaggle website to collect my dataset. This dataset is a scrapped data from amazon website, where the main author has correctly provided a reference to the Amazon website, as a source of dataset where he has collected data from . This dataset contains information regarding different categories of electronic goods, from USB chargers to Smart Televisions. This dataset doesnot provide personal information about any users beside their provided full name and user id. Also I found on this Amazon official website: https://www.aboutamazon.com/news/how-amazon-works/amazon-is-earning-and-maintaining-customer-trust-through-privacy ,where Amazon is claiming how they are very much aware of their ethical obligations towards their users and following every rules and regulations to ensure the customers privacy and data security. The Amazon website has claimed that through their internal security processes and procedures they are trying their best to maintain the trust of customers around the world.
 
