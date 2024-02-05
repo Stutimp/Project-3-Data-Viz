@@ -58,8 +58,20 @@ After making some queries, following are the findings I found from my dataset:
 - Within the dataframe made out of five Most Popular Smart Tvs, we found the correlation coefficient between 'rating_count' and 'discounted_price' is approximately 0.054 which indicates a very weak positive linear relationship between the number of ratings a product has received and its discounted price within the dataset. This suggests that there is barely any linear correlation between how many times a product has been rated and its discounted price and vice versa.
 - Also the stacked bar graph showing a comparison between the actual prices and discounted prices of smart TVs with a rating score of 4, where one bar showing actual price of each product and another bar showing discounted price for each product suggests that the actual prices reach up to 150k INR while the discounted prices are consistently lower among the SmarT TVs int he dataset.
 
-###  Data Visualizations
+###  Data Visualizations:
+[text](outputs_Viz/Most_popular_computer_USBs1.html)
 
+
+[text](outputs_Viz/Most_popular_tv_bubble_HDMIs2.html)
+
+
+[text](outputs_Viz/Cables_types_pie3.html)
+
+
+[text](outputs_Viz/most_popular_smartTvs4.html)
+
+
+[text](outputs_Viz/Amazon_bar1.html)
 
 
 
