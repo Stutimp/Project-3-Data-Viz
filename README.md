@@ -11,34 +11,10 @@ This dataset is which is in csv form is a scrapped data collection from the amaz
 
 ## Data cleaning and exploration 
 - Note: I have done my initial data exploration inside the jupyter notebook called as, 'Initial Data Analysis of Amazon data through python.ipynb' (inside Code_Amazon folder).
-My original dataset contained 1465 rows and 16 columns. I did some preliminary data exploration in the jupyter notebook named as, 'Initial Data Analysis of Amazon data through python' (inside the Amazon_code folder), using .nunique(), .dtypes(), .info() functions.  For the successful query functions, I need my columns to be readable by the codes I will create.However, initially my data columns were all at string formats, hence for the sake of data cleaning and further data exploration, I did some required data type formatting. I changed the data types of the columns [discounted_price, actual_price, discount_percentage, rating and rating_count] from string format to numerical format. For this, first I removed the rupee symbol (Indian currency sign ,'₹') and any other non-numeric characters such as, (% ) except the decimal point, converting the columns to numeric, coercing errors to NaN (in case there are any non-numeric values left). After dropping all columns with missing values /Nan values, data type conversions, and also dropping the duplicated data points, we are now left with 16 columns and 1462 data points with 2 floats, 3 integers and rest of all are in string formats. The dataset info is as following:
-
-<class 'pandas.core.frame.DataFrame'>
-Index: 1462 entries, 0 to 1464
-Data columns (total 16 columns):
- #   Column               Non-Null Count  Dtype  
----  ------               --------------  -----  
- 0   product_id           1462 non-null   object 
- 1   product_name         1462 non-null   object 
- 2   category             1462 non-null   object 
- 3   discounted_price     1462 non-null   int32  
- 4   actual_price         1462 non-null   int32  
- 5   discount_percentage  1462 non-null   float64
- 6   rating               1462 non-null   int32  
- 7   rating_count         1462 non-null   float64
- 8   about_product        1462 non-null   object 
- 9   user_id              1462 non-null   object 
- 10  user_name            1462 non-null   object 
- 11  review_id            1462 non-null   object 
- 12  review_title         1462 non-null   object 
- 13  review_content       1462 non-null   object 
- 14  img_link             1462 non-null   object 
- 15  product_link         1462 non-null   object 
-dtypes: float64(2), int32(3), object(11)
-memory usage: 177.0+ KB
+My original dataset contained 1465 rows and 16 columns. I did some preliminary data exploration in the jupyter notebook named as, 'Initial Data Analysis of Amazon data through python' (inside the Amazon_code folder), using .nunique(), .dtypes(), .info() functions.  For the successful query functions, I need my columns to be readable by the codes I will create.However, initially my data columns were all at string formats, hence for the sake of data cleaning and further data exploration, I did some required data type formatting. I changed the data types of the columns [discounted_price, actual_price, discount_percentage, rating and rating_count] from string format to numerical format. For this, first I removed the rupee symbol (Indian currency sign ,'₹') and any other non-numeric characters such as, (% ) except the decimal point, converting the columns to numeric, coercing errors to NaN (in case there are any non-numeric values left). After dropping all columns with missing values /Nan values, also deleting the duplicated rows on "product_id" column for the proper data analysis process, some data type conversions, and also dropping the duplicated data points, we are now left with 16 columns and 1348 data points with 2 floats, 3 integers and rest of all are in string formats.
 
 - Finally the clean dataset is saved externally inside the Clean_Data_Resources folder as 'amazon_cleanData.csv'.
-- Note: - Because of the size, the 'Resources' folder containing the original Amazon dataset and the 'Clean_Data_Resources' folder containing the cleaned dataset both are uploaded into google drive and the link is provided as following:
+- Note: - Because of the size, the 'Resources' folder containing the original Amazon dataset and the 'Clean_Data_Resources' folder containing the cleaned dataset both are uploaded into google drive and the link is provided as following:***************
 
 
 ## Data analysis with interactive Visualizations using Plotly
@@ -53,11 +29,14 @@ I have used following command to import my cleaned dataset into MongoDB database
 - I assigned the Clean_Data_Resources database to a variable name 'db' and reviewed my collection. - After that I assigned the collection, 'amazon_cleanData' to a variable name 'amazon' and reviewed documents inside my collection.
 - The made some interesting queries and tried to get some indepth insights of my dataset.
 - I created some dataframes, and made some interesting interactive visualizations using Plotly and saved externally inside the 'output_Viz' folder.
+- In the project, in order to process the text based information, inside the column "review_content" , I have used 'TextBlob'  as a new python library. 
 
-## Findings of the project
+- References for this new library are following: https://buildmedia.readthedocs.org/media/pdf/textblob/latest/textblob.pdf and https://textblob.readthedocs.io/en/dev/quickstart.html#create-a-textblob
+
+## Some of most Important findings of the project
 After making some queries, following are the findings I found from my dataset:
-- My amazon dataset has total 231 computer USB cables. 
-- **Product id "B086JTMRYL"** **ESR USB C to Lightning Cable,** is the most popular computer USB Cables in the dataset (rating counts: 19,763) which has discounted price greater than equal to 100 Indian rupees (discounted price = 1519 INR) and have rating score greater than equal to 4. 
+- My amazon dataset has total 159 computer USB cables. 
+- {"Product_id": B07DC4RZPY, "Product_name": Amazon Basics USB A to Lightning MFi Certified...} is the most popular computer USB cable with 1,78,817 rating counts, with rating score >= 4, in our amazon dataset.
 - 
 - 
 - 
