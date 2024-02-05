@@ -2,12 +2,13 @@
 
 ## Project Overview
 
-### Regarding Dataset
+### Regarding Dataset and the Purpose of the project
 
 For the project - 3, I picked the data visualization track. Here, as per the project requirements, I have picked a dataset from kaggle, the link for my dataset is as following:
 https://www.kaggle.com/datasets/karkavelrajaj/amazon-sales-dataset
 
 This dataset is which is in csv form is a scrapped data collection from the amazon websites consisting different electronic goods. For my project, I have  picked two different kinds of categories. One consists of our everyday electronic items, such as Cables. I have explored different kinds of Cables from the dataset and did some exploratory data analysis on them.
+I picked this dataset because I always wanted to work on amazon dataset, and wanted to figure out the way the data that we can collect from different sections of the website, such as, price sections, discount sections,reviews and rating sections could be processed and analyzed to extract some relevant information regarding different kinds of products. I have categorically chosen two types of products for my analysis, they are: 1. USB cables consisting of 8 different types and 2. Smart Televsions. from this dataset and tried my best to extract some meaningful information from it.
 
 ## Data cleaning and exploration 
 - Note: I have done my initial data exploration inside the jupyter notebook called as, 'Initial Data Analysis of Amazon data through python.ipynb' (inside Code_Amazon folder).
@@ -17,7 +18,7 @@ My original dataset contained 1465 rows and 16 columns. I did some preliminary d
 - Note: - Because of the huge sizes, the 'Resources' folder containing the original Amazon dataset and the 'Clean_Data_Resources' folder containing the cleaned dataset both are uploaded into a google drive and the link is provided as following: https://drive.google.com/drive/folders/10IlokEqsQ7Xx6Y9571HVIxnSrrij2VWW?usp=sharing (Kindly find both folders for the original and cleaned dataset for this project)
 
 
-## Data analysis with interactive Visualizations using Plotly
+## Database Setup with MongoDB and data analysis with interactive Visualizations using Plotly
 
 - Note : The database that I have decided to use to house my cleaned dataset is, MongoDB,  where I will make some indepth queries and try to extract some relevant results from the dataset for the data analysis purpose. 
 
@@ -29,7 +30,7 @@ I have used following command to import my cleaned dataset into MongoDB database
 - I assigned the Clean_Data_Resources database to a variable name 'db' and reviewed my collection. - After that I assigned the collection, 'amazon_cleanData' to a variable name 'amazon' and reviewed documents inside my collection.
 - The made some interesting queries and tried to get some indepth insights of my dataset.
 - I created some dataframes, and made some interesting interactive visualizations using Plotly and saved externally inside the 'output_Viz' folder.
-- In the project, in order to process the text based information, inside the column "review_content" , I have used 'TextBlob'  as a new python library. 
+- In the project, in order to process the text based information, inside the column "review_content" , I have used 'TextBlob'  as a new python library. (not shown in class)
 
 - References for this new library are following: https://buildmedia.readthedocs.org/media/pdf/textblob/latest/textblob.pdf and https://textblob.readthedocs.io/en/dev/quickstart.html#create-a-textblob
 
@@ -73,8 +74,9 @@ After making some queries, following are the findings I found from my dataset:
 
 [text](outputs_Viz/Amazon_bar1.html)
 
+### Instructions on viewing the Data Visualizations 
 
-
+All my data visualizations are inside my output_Viz folder. The visualizations are created using Plotly library. These are user interactive visualizations. I have saved the visualizations in dynamic and static image forms both inside the output Viz folder.A user needs to hover through the graphs and charts in order to better understand the scenario or outcomes it is trying to communicate. 
 ## Ethical Considerations made in the project:
 The ethical considerations for collecting and analyzing datasets are very critical to ensure respect for privacy, consent, fairness, and transparency.The purpose for which data is collected and analyzed should be ethical and not harm individuals or communities.Stakeholders, including the public and data subjects, should have the ability to understand and question how their data is being used and the decisions being made based on the data analysis. 
 For this project, I have used the kaggle website to collect my dataset. This dataset is a scrapped data from amazon website, where the main author has correctly provided a reference to the Amazon website, as a source of dataset where he has collected data from . This dataset contains information regarding different categories of electronic goods, from USB chargers to Smart Televisions. This dataset doesnot provide personal information about any users beside their provided full name and user id. Also I found on this Amazon official website: https://www.aboutamazon.com/news/how-amazon-works/amazon-is-earning-and-maintaining-customer-trust-through-privacy ,where Amazon is claiming how they are very much aware of their ethical obligations towards their users and following every rules and regulations to ensure the customers privacy and data security. The Amazon website has claimed that through their internal security processes and procedures they are trying their best to maintain the trust of customers around the world.
@@ -88,6 +90,11 @@ Some references I have used while working in this project:
 - https://www.mongodb.com/docs/atlas/getting-started/
 - https://pandas.pydata.org/docs/reference/api/pandas.json_normalize.html
 - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style
+
+Thank you very much !
+
+Regards,
+Stuti Poudel
 
 
 
