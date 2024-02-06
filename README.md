@@ -15,7 +15,7 @@ I picked this dataset because I always wanted to work on amazon dataset, and wan
 My original dataset contained 1465 rows and 16 columns. I did some preliminary data exploration in the jupyter notebook named as, 'Initial Data Analysis of Amazon data through python' (inside the Amazon_code folder), using .nunique(), .dtypes(), .info() functions.  For the successful query functions, I need my columns to be readable by the codes I will create.However, initially my data columns were all at string formats, hence for the sake of data cleaning and further data exploration, I did some required data type formatting. I changed the data types of the columns [discounted_price, actual_price, discount_percentage, rating and rating_count] from string format to numerical format. For this, first I removed the rupee symbol (Indian currency sign ,'₹') and any other non-numeric characters such as, (% ) except the decimal point, converting the columns to numeric, coercing errors to NaN (in case there are any non-numeric values left). After dropping all columns with missing values /Nan values, also deleting the duplicated rows on "product_id" column for the proper data analysis process, some data type conversions, and also dropping the duplicated data points, we are now left with 16 columns and 1348 data points with 2 floats, 3 integers and rest of all are in string formats.
 
 - Finally the clean dataset is saved externally inside the Clean_Data_Resources folder as 'amazon_cleanData.csv'.
-- Note: - Because of the huge sizes, the 'Resources' folder containing the original Amazon dataset and the 'Clean_Data_Resources' folder containing the cleaned dataset both are uploaded into a google drive and the link is provided as following: https://drive.google.com/drive/folders/10IlokEqsQ7Xx6Y9571HVIxnSrrij2VWW?usp=sharing (Kindly find both folders for the original and cleaned dataset for this project)
+- Note: - Because of the huge sizes, the 'Resources' folder containing the original Amazon dataset and the 'Clean_Data_Resources' folder containing the cleaned dataset both are uploaded into a google drive and the link is provided as following: https://drive.google.com/drive/folders/10IlokEqsQ7Xx6Y9571HVIxnSrrij2VWW?usp=sharing (Kindly find both folders for the original and cleaned dataset sources for this project)
 
 
 ## Database Setup with MongoDB and data analysis with interactive Visualizations using Plotly
@@ -23,7 +23,7 @@ My original dataset contained 1465 rows and 16 columns. I did some preliminary d
 - Note : The database that I have decided to use to house my cleaned dataset is, MongoDB,  where I will make some indepth queries and try to extract some relevant results from the dataset for the data analysis purpose. 
 
 I have used following command to import my cleaned dataset into MongoDB database for the data analysis and visualizations:
- mongoimport --type csv -d Clean_Data_Resources -c amazon_cleanData --headerline --drop amazon_cleanData.csv
+ - mongoimport --type csv -d Clean_Data_Resources -c amazon_cleanData --headerline --drop amazon_cleanData.csv
 
 - First I imported all required dependencies.
 - I created an instance of Mongoclient, and confirmed having my amazon new database using, print(mongo.list_database_names()) function.
@@ -59,22 +59,8 @@ After making some queries, following are the findings I found from my dataset:
 - Within the dataframe made out of five Most Popular Smart Tvs, we found the correlation coefficient between 'rating_count' and 'discounted_price' is approximately 0.054 which indicates a very weak positive linear relationship between the number of ratings a product has received and its discounted price within the dataset. This suggests that there is barely any linear correlation between how many times a product has been rated and its discounted price and vice versa.
 - Also the stacked bar graph showing a comparison between the actual prices and discounted prices of smart TVs with a rating score of 4, where one bar showing actual price of each product and another bar showing discounted price for each product suggests that the actual prices reach up to 150k INR while the discounted prices are consistently lower among the SmarT TVs int he dataset.
 
-###  Data Visualizations:
-[text](outputs_Viz/Most_popular_computer_USBs1.html)
-
-
-[text](outputs_Viz/Most_popular_tv_bubble_HDMIs2.html)
-
-
-[text](outputs_Viz/Cables_types_pie3.html)
-
-
-[text](outputs_Viz/most_popular_smartTvs4.html)
-
-
-[text](outputs_Viz/Amazon_bar1.html)
-
-### Instructions on viewing the Data Visualizations 
+###  Data Visualizations
+##### Instructions on viewing the Data Visualizations 
 
 All my data visualizations are inside my output_Viz folder. The visualizations are created using Plotly library. These are user interactive visualizations. I have saved the visualizations in dynamic and static image forms both inside the output Viz folder.A user needs to hover through the graphs and charts in order to better understand the scenario or outcomes it is trying to communicate. 
 
